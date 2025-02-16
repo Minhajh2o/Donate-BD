@@ -71,3 +71,7 @@ function addHistory(amount, titleId) {
     history.appendChild(historyList);
 }
 
+// function to clear input field
+function clearInputField(id) {
+    document.getElementById(id).value = '';
+}

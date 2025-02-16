@@ -244,6 +244,21 @@
         </div>
         <!-- history part -->
         <div id="history-part" class="min-h-screen pt-6 pb-24 space-y-5 container mx-auto hidden"></div>
+        <!-- Donation Confirmation Modal -->
+        <div  id="donation-modal" class="hidden">
+            <div class="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center">
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center max-w-sm w-full">
+                    <h2 class="text-3xl font-bold">Congrats!</h2>
+                    <div class="flex justify-center space-x-2 my-4">
+                        <img src="assets/coin.png" alt="coin" class="w-10">
+                        <p class="text-3xl font-semibold text-gray-600"><span id="donation-amount-text"></span> BDT</p>
+                    </div>
+                    <p class="text-gray-600">You Have Donated for Humankind</p>
+                    <p class="font-semibold text-lg">Successfully</p>
+                    <button id="close-modal" class="mt-4 bg-gray-300 px-4 py-2 rounded">Close Confirmation</button>
+                </div>
+            </div>
+        </div>
     </main>
     <footer class="h-24 bg-orange-50"></footer>
     <script src="script/utilities.js"></script>
