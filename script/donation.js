@@ -2,9 +2,14 @@
 document.getElementById('noakhali-donation-btn').addEventListener('click', function () {
     // getting amount from input field
     const donationAmount = getInputFieldValueByID('noakhali-input-amount');
+    // current balance
+    const balance = getTextFieldValueByID('balance');
 
-    if (donationAmount < 0 || isNaN(donationAmount)) {
+    if (donationAmount < 0 || isNaN(donationAmount)){
         alert('Please enter a valid amount');
+        return;
+    }else if (donationAmount > balance){
+        alert('Insufficient balance');
         return;
     }
 
@@ -31,6 +36,9 @@ document.getElementById('feni-donation-btn').addEventListener('click', function 
     if (donationAmount < 0 || isNaN(donationAmount)) {
         alert('Please enter a valid amount');
         return;
+    }else if (donationAmount > balance){
+        alert('Insufficient balance');
+        return;
     }
 
     // calculating total donation amount
@@ -56,6 +64,9 @@ document.getElementById('quota-movement-donation-btn').addEventListener('click',
     if (donationAmount < 0 || isNaN(donationAmount)) {
         alert('Please enter a valid amount');
         return;
+    }else if (donationAmount > balance){
+        alert('Insufficient balance');
+        return;
     }
 
     // calculating total donation amount
@@ -79,6 +90,9 @@ document.getElementById('sylhet-donation-btn').addEventListener('click', functio
 
     if (donationAmount < 0 || isNaN(donationAmount)) {
         alert('Please enter a valid amount');
+        return;
+    }else if (donationAmount > balance){
+        alert('Insufficient balance');
         return;
     }
 
@@ -105,6 +119,9 @@ document.getElementById('chattogram-donation-btn').addEventListener('click', fun
     if (donationAmount < 0 || isNaN(donationAmount)) {
         alert('Please enter a valid amount');
         return;
+    }else if (donationAmount > balance){
+        alert('Insufficient balance');
+        return;
     }
 
     // Calculating total donation amount
@@ -129,6 +146,9 @@ document.getElementById('rohingya-donation-btn').addEventListener('click', funct
 
     if (donationAmount < 0 || isNaN(donationAmount)) {
         alert('Please enter a valid amount');
+        return;
+    }else if (donationAmount > balance){
+        alert('Insufficient balance');
         return;
     }
 
