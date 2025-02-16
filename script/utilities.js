@@ -32,6 +32,8 @@ function toggleSection(sectionID) {
 function toggleButtonColor(btnID) {
     document.getElementById('donation-btn').classList.remove('bg-lime-400');
     document.getElementById('history-btn').classList.remove('bg-lime-400');
+    document.getElementById('donation-btn-sm').classList.remove('bg-lime-400');
+    document.getElementById('history-btn-sm').classList.remove('bg-lime-400');
 
     document.getElementById(btnID).classList.add('bg-lime-400');
 }
@@ -63,7 +65,7 @@ function addHistory(amount, titleId) {
     const historyList = document.createElement('div');
     historyList.innerHTML = `
         <div class="border-2 border-base-300 p-4 rounded-lg">
-            <h1 class="text-xl font-semibold">${amount} Taka is Donated for ${titleId}</h1>
+            <h1 class="text-xl font-semibold pb-2">${amount} Taka is Donated for ${titleId}</h1>
             <p>Date : ${dateTime} (${gmtOffset})</p>
         </div>
     `;
