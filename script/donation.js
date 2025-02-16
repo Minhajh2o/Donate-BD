@@ -1,3 +1,7 @@
+document.getElementById('donation-btn').addEventListener('click', function () {
+    toggleSection('donation-part');
+});
+
 // for noakhali
 document.getElementById('noakhali-donation-btn').addEventListener('click', function () {
     // getting amount from input field

@@ -1,17 +1,29 @@
-function updateBalance(amount) {
-    const balance = getTextFieldValueByID('balance');
-    document.getElementById('balance').innerText = balance - amount;
+// function to get the donation amount from input field
+function getInputFieldValueByID(id) {
+    return parseFloat(document.getElementById(id).value);
 }
 
+// function to get the current donation amount
+function getTextFieldValueByID(id) {
+    return parseFloat(document.getElementById(id).innerText);    
+}
+
+// update the donation amount
 function addDonation(id, amount) {
     const donationAmount = getTextFieldValueByID(id);
     document.getElementById(id).innerText = donationAmount + amount;
 }
 
-function getInputFieldValueByID(id) {
-    return parseFloat(document.getElementById(id).value);
+// update the current balance
+function updateBalance(amount) {
+    const balance = getTextFieldValueByID('balance');
+    document.getElementById('balance').innerText = balance - amount;
 }
 
-function getTextFieldValueByID(id) {
-    return parseFloat(document.getElementById(id).innerText);    
+// toggle donation and history section
+function toggleSection(sectionID) {
+    document.getElementById('donation-part').classList.add('hidden');
+    document.getElementById('history-part').classList.add('hidden');
+
+    document.getElementById(sectionID).classList.remove('hidden');
 }
