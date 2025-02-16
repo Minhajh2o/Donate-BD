@@ -27,3 +27,11 @@ function toggleSection(sectionID) {
 
     document.getElementById(sectionID).classList.remove('hidden');
 }
+
+// toggle button color
+function toggleButtonColor(btnID) {
+    document.getElementById('donation-btn').classList.remove('bg-lime-400');
+    document.getElementById('history-btn').classList.remove('bg-lime-400');
+
+    document.getElementById(btnID).classList.add('bg-lime-400');
+}
