@@ -1,8 +1,3 @@
-document.getElementById('donation-btn').addEventListener('click', function () {
-    toggleSection('donation-part');
-    toggleButtonColor('donation-btn');
-});
-
 // for noakhali
 document.getElementById('noakhali-donation-btn').addEventListener('click', function () {
     // getting amount from input field
@@ -18,8 +13,14 @@ document.getElementById('noakhali-donation-btn').addEventListener('click', funct
     // updating balance
     updateBalance(donationAmount);
 
+    // adding history
+    const title = document.getElementById('noakhali').innerText;
+    addHistory(donationAmount, title);
+
     alert('Thank you for your donation');
 
+    // clear the input field
+    document.getElementById('noakhali-input-amount').value = '';
 });
 
 // for feni
@@ -37,7 +38,14 @@ document.getElementById('feni-donation-btn').addEventListener('click', function 
     // updating balance
     updateBalance(donationAmount);
 
+    // adding history
+    const title = document.getElementById('feni').innerText;
+    addHistory(donationAmount, title);
+
     alert('Thank you for your donation');
+
+    // clear the input field
+    document.getElementById('feni-input-amount').value = '';
 });
 
 // for quota movement aid
@@ -55,6 +63,12 @@ document.getElementById('quota-movement-donation-btn').addEventListener('click',
     // updating balance
     updateBalance(donationAmount);
 
+    // adding history
+    const title = document.getElementById('quota-movement').innerText;
+    addHistory(donationAmount, title);
+
     alert('Thank you for your donation');
 
+    // clear the input field
+    document.getElementById('quota-movement-input-amount').value = '';
 });
