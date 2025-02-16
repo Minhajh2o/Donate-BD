@@ -9,11 +9,11 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <header>
+    <header class="sticky top-0 z-50 shadow-md">
         <!-- navbar -->
         <nav>
-            <div class="navbar bg-orange-50 pt-4 pb-8">
-                <div class="navbar-start">
+            <div class="navbar bg-orange-50 pt-4 px-5 pb-8">
+                <div class="navbar-start hidden md:block">
                     <a class="btn btn-ghost text-xl bg-lime-400">Blog</a>
                 </div>
                 <div class="navbar-center space-x-2">
@@ -26,13 +26,13 @@
                 </div>
             </div>
             <!-- donation, history button -->
-            <div class="flex justify-center space-x-2 mt-10 mb-6">
+            <div class="flex justify-center space-x-2 py-6 bg-white bg-opacity-70 backdrop-blur-lg">
                 <a class="btn btn-ghost bg-lime-400">Donation</a>
                 <a class="btn btn-ghost">History</a>
             </div>
         </nav>
     </header>
-    <main class="space-y-6">
+    <main class="space-y-6 pt-6 pb-24">
         <!-- Noakhali section -->
         <div class="flex w-full flex-col px-5">
             <div class="hero border-2 border-base-300 max-w-fit mx-auto rounded-2xl">
@@ -57,7 +57,8 @@
                             need.
                         </p>
                         <!-- input field -->
-                        <input type="text" id="noakhali-input-amount" placeholder="Donation Amount" class="input input-bordered w-full" />
+                        <input type="text" id="noakhali-input-amount" placeholder="Donation Amount"
+                            class="input input-bordered w-full" />
                         <!-- donate button -->
                         <button id="noakhali-donation-btn" class="btn  bg-lime-400">Donate Now</button>
                     </div>
@@ -81,10 +82,16 @@
                         <h1 class="text-xl font-bold">Donate for Flood Relief in Feni,Bangladesh</h1>
                         <!-- description -->
                         <p class="pb-2">
-                            The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.
+                            The recent floods in Feni have devastated local communities, leading to severe disruption
+                            and loss. Your generous donation will help provide immediate aid, including food, clean
+                            water, and medical supplies, to those affected by this calamity. Together, we can offer
+                            crucial support and help rebuild lives in the aftermath of this disaster. Every contribution
+                            counts towards making a real difference. Please consider donating today to assist those in
+                            urgent need.
                         </p>
                         <!-- input field -->
-                        <input type="text" placeholder="Donation Amount" id="feni-input-amount" class="input input-bordered w-full" />
+                        <input type="text" placeholder="Donation Amount" id="feni-input-amount"
+                            class="input input-bordered w-full" />
                         <!-- donate button -->
                         <button id="feni-donation-btn" class="btn bg-lime-400">Donate Now</button>
                     </div>
@@ -108,17 +115,23 @@
                         <h1 class="text-xl font-bold">Aid for Injured in the Quota Movement</h1>
                         <!-- description -->
                         <p class="pb-2">
-                            The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.
+                            The recent Quota movement has resulted in numerous injuries and significant hardship for
+                            many individuals. Your support is crucial in providing medical assistance, rehabilitation,
+                            and necessary supplies to those affected. By contributing, you help ensure that injured
+                            individuals receive the care and support they need during this challenging time. Every
+                            donation plays a vital role in alleviating their suffering and aiding in their recovery.
+                            Please consider making a donation to support these brave individuals in their time of need.
                         </p>
                         <!-- input field -->
-                        <input type="text" placeholder="Donation Amount" id="quota-movement-input-amount" class="input input-bordered w-full" />
+                        <input type="text" placeholder="Donation Amount" id="quota-movement-input-amount"
+                            class="input input-bordered w-full" />
                         <!-- donate button -->
                         <button id="quota-movement-donation-btn" class="btn bg-lime-400">Donate Now</button>
                     </div>
                 </div>
             </div>
-        </div>    
+        </div>
     </main>
-    <footer></footer>
+    <footer class="h-24 bg-orange-50"></footer>
 </body>
 </html>
