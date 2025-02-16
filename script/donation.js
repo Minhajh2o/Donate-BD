@@ -72,3 +72,77 @@ document.getElementById('quota-movement-donation-btn').addEventListener('click',
     // clear the input field
     document.getElementById('quota-movement-input-amount').value = '';
 });
+// For Sylhet
+document.getElementById('sylhet-donation-btn').addEventListener('click', function () {
+    // Getting amount from input field
+    const donationAmount = getInputFieldValueByID('sylhet-input-amount');
+
+    if (donationAmount < 0 || isNaN(donationAmount)) {
+        alert('Please enter a valid amount');
+        return;
+    }
+
+    // Calculating total donation amount
+    addDonation('donation-collection-sylhet', donationAmount);
+    // Updating balance
+    updateBalance(donationAmount);
+
+    // Adding history
+    const title = document.getElementById('sylhet').innerText;
+    addHistory(donationAmount, title);
+
+    alert('Thank you for your donation');
+
+    // Clear the input field
+    document.getElementById('sylhet-input-amount').value = '';
+});
+
+// For Chattogram
+document.getElementById('chattogram-donation-btn').addEventListener('click', function () {
+    // Getting amount from input field
+    const donationAmount = getInputFieldValueByID('chattogram-input-amount');
+
+    if (donationAmount < 0 || isNaN(donationAmount)) {
+        alert('Please enter a valid amount');
+        return;
+    }
+
+    // Calculating total donation amount
+    addDonation('donation-collection-chattogram', donationAmount);
+    // Updating balance
+    updateBalance(donationAmount);
+
+    // Adding history
+    const title = document.getElementById('chattogram').innerText;
+    addHistory(donationAmount, title);
+
+    alert('Thank you for your donation');
+
+    // Clear the input field
+    document.getElementById('chattogram-input-amount').value = '';
+});
+
+// For Rohingya
+document.getElementById('rohingya-donation-btn').addEventListener('click', function () {
+    // Getting amount from input field
+    const donationAmount = getInputFieldValueByID('rohingya-input-amount');
+
+    if (donationAmount < 0 || isNaN(donationAmount)) {
+        alert('Please enter a valid amount');
+        return;
+    }
+
+    // Calculating total donation amount
+    addDonation('donation-collection-rohingya', donationAmount);
+    // Updating balance
+    updateBalance(donationAmount);
+
+    // Adding history
+    const title = document.getElementById('rohingya').innerText;
+    addHistory(donationAmount, title);
+
+    alert('Thank you for your donation');
+
+    // Clear the input field
+    document.getElementById('rohingya-input-amount').value = '';
+});

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <!-- DaisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/5cdf27c05f.js" crossorigin="anonymous"></script>
+
+    <style>
+        /* Rotation animation */
+        @keyframes rotate-question {
+            0%,
+            100% {
+                transform: rotate(-30deg);
+            }
+
+            50% {
+                transform: rotate(30deg);
+            }
+
+        }
+
+        .animate-rotate {
+            display: inline-block;
+            animation: rotate-question 1.5s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+    <header class="sticky top-0 z-50 shadow-md">
+        <!-- navbar -->
+        <nav>
+            <div class="navbar bg-orange-50 pt-4 px-5 pb-8">
+                <div class="navbar-start hidden md:block">
+                    <a href="index.html" class="btn btn-ghost text-xl bg-lime-400">Home</a>
+                </div>
+                <div class="navbar-center space-x-2">
+                    <img src="assets/logo.png" alt="logo" class="w-12 h-12">
+                    <a class="text-xl font-semibold">Donate Bangladesh</a>
+                </div>
+                <div class="navbar-end space-x-2">
+                    <img src="assets/coin.png" alt="coin">
+                    <p class="text-xl font-semibold text-gray-600"><span id="balance">5000</span> BDT</p>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="space-y-6 px-5 pt-6 pb-24">
+        <h1 class="text-4xl font-bold">Important FAQ
+            <i class="fa-solid fa-circle-question animate-rotate"></i>
+        </h1>
+        <!-- Question 1 -->
+        <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-base-200 border">
+            <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
+            <div class="collapse-content">
+                <p>The DOM is a programming interface that represents an HTML or XML document as a hierarchical tree
+                    structure. It allows JavaScript to access, modify, and manipulate elements, attributes, and styles
+                    dynamically.</p>
+            </div>
+        </div>
+        <!-- Question 2 -->
+        <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-base-200 border">
+            <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?
+            </div>
+            <div class="collapse-content">
+                <p>You can select elements using JavaScript methods:</p>
+                <ul>
+                    <li><span class="font-mono">document.getElementById("id")</span> – Selects an element by its ID</li>
+                    <li><span class="font-mono">document.getElementsByClassName("class")</span> – Selects elements by
+                        class name.
+                    </li>
+                    <li><span class="font-mono">document.getElementsByTagName("tag")</span> – Selects elements by tag
+                        name.
+                    </li>
+                    <li><span class="font-mono">document.querySelector("selector")</span> – Selects the first matching
+                        element.
+                    </li>
+                    <li><span class="font-mono">document.querySelectorAll("selector")</span> – Selects all matching
+                        elements</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Question 3 -->
+        <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-base-200 border">
+            <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why
+                is it useful?
+            </div>
+            <div class="collapse-content">
+                <p>Event delegation is a technique where a parent element handles events for its child elements using
+                    event bubbling. Instead of attaching listeners to multiple child elements, a single listener on the
+                    parent can manage them all. This improves performance, reduces memory usage, and makes it easier to
+                    handle dynamically added elements.</p>
+            </div>
+        </div>
+        <!-- Question 4 -->
+        <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-base-200 border">
+            <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles
+                using the DOM?
+            </div>
+            <div class="collapse-content">
+                <p>You can manipulate an element's attributes and styles using JavaScript:</p><br>
+                <ul>
+                    <!-- attributes -->
+                    <li> Attributes: Use 
+                        <span class="font-mono">element.setAttribute("attr", "value")</span> to modify,
+                        <span class="font-mono">element.getAttribute("attr")</span> to retrieve, and 
+                        <span class="font-mono">element.removeAttribute("attr")</span> 
+                        to remove an attribute.
+                    </li><br>
+                    <!-- styles -->
+                    <li>Styles: Modify inline styles using 
+                        <span class="font-mono">element.style.property = "value" </span> 
+                        – Sets the value of a CSS property. (e.g., 
+                        <span class="font-mono">element.style.color = "red"</span>)
+                    </li><br>
+                        <!-- classes -->
+                    <li>Classes: Use 
+                        <span class="font-mono">classList.add("class")</span>, 
+                        <span class="font-mono">classList.remove("class")</span>, 
+                        <span class="font-mono">classList.toggle("class")</span> 
+                        to modify element classes dynamically.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
